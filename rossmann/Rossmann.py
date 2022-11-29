@@ -9,7 +9,7 @@ class Rossmann (object):
     
     def __init__(self):
         
-        self.home_path = '/home/daniel/repos/ds_em_producao/Datascience_em_Producao/'
+        self.home_path = ''
         
         self.competition_distance_scaler   = pickle.load(open(self.home_path + 'parameter/competition_distance_scaler.pkl','rb'))
 

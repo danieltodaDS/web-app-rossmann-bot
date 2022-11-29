@@ -2,9 +2,10 @@ import pickle
 import pandas as pd
 from flask import Flask, Response, request 
 from rossmann.Rossmann import Rossmann
+import os 
 
 # loading model
-model = pickle.load (open('/home/daniel/repos/ds_em_producao/Datascience_em_Producao/rossman.pkl', 'rb'))
+model = pickle.load (open('/model/rossman.pkl', 'rb'))
 # quando a API iniciar ela carregara o modelo em memoria e com endpoint ativo
 # ae receber uma requisao, ela prepara os dados, passa pro modelo, recebe a previsao, anexa nos dados 
 # passados pelo usuario, e retorna
@@ -56,5 +57,7 @@ def rossmann_predict ():
         
         
 if __name__ == '__main__':
-    app.run('0.0.0.0')
+    port = os.environ.get ('PORT', 5000)
+    #para setar a porta 5000, que é a padrao do FLASK
+    app.run(host = '0.0.0.0', port =port)
     # sequencia de 0 indica que o app esta rodando em ambiente local
