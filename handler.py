@@ -5,7 +5,7 @@ from rossmann.Rossmann import Rossmann
 import os 
 
 # loading model
-model = pickle.load (open('model/rossman.pkl', 'rb'))
+model = pickle.load (open('model/rossmann.pkl', 'rb'))
 # quando a API iniciar ela carregara o modelo em memoria e com endpoint ativo
 # ae receber uma requisao, ela prepara os dados, passa pro modelo, recebe a previsao, anexa nos dados 
 # passados pelo usuario, e retorna
