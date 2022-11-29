@@ -59,5 +59,5 @@ def rossmann_predict ():
 if __name__ == '__main__':
     port = os.environ.get ('PORT', 5000)
     #para setar a porta 5000, que é a padrao do FLASK
-    app.run(host = '0.0.0.0', port =port)
+    app.run(host = '0.0.0.0', port = port)
     # sequencia de 0 indica que o app esta rodando em ambiente local

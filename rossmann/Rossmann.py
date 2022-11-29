@@ -80,13 +80,13 @@ class Rossmann (object):
 
         ## 1.6. Change Dtypes
 
-        df1['competition_open_since_month'] = df1['competition_open_since_month'].astype(int)
+        df1['competition_open_since_month'] = df1['competition_open_since_month'].astype('int64')
 
-        df1['competition_open_since_year'] = df1['competition_open_since_year'].astype(int)
+        df1['competition_open_since_year'] = df1['competition_open_since_year'].astype('int64')
 
-        df1['promo2_since_week'] = df1['promo2_since_week'].astype(int)
+        df1['promo2_since_week'] = df1['promo2_since_week'].astype('int64')
 
-        df1['promo2_since_year'] = df1['promo2_since_year'].astype(int)    
+        df1['promo2_since_year'] = df1['promo2_since_year'].astype('int64')    
         
         return df1    
     
